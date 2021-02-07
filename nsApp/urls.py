@@ -18,7 +18,6 @@ from django.urls import path
 from nsApp import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('author/', views.AuthorListView.as_view()),
     path('author/<int:pk>', views.AuthorDetailView.as_view()),
     path('book/', views.BookListView.as_view()),
