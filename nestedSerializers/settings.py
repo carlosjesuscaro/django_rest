@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'nestedSerializers.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'studentdb',
+        'NAME': 'authordb',
         'USER': 'root',
         'PASSWORD': 'M@rc85A8r3!185'
     }
