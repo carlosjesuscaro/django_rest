@@ -21,3 +21,4 @@ class StudentViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Student.objects.all()
     serializer_class = StudentSerializer
 '''
+
