@@ -21,5 +21,5 @@ class Flight(models.Model):
 
 
 class Reservation(models.Model):
-    flight = models.OneToOneField(Flight, on_delete=models.CASCADE())
-    passenger = models.OneToOneField(Passenger, on_delete=models.CASCADE())
+    flight = models.OneToOneField(Flight, on_delete=models.CASCADE)
+    passenger = models.OneToOneField(Passenger, on_delete=models.CASCADE)
