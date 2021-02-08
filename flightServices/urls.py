@@ -19,12 +19,13 @@ from rest_framework.routers import DefaultRouter
 from flightApp import views
 
 router = DefaultRouter()
-router.register('flight', views.FlightViewSet)
-router.register('passenger', views.PassengerViewSet)
-router.register('reservation', views.ReservationViewSet)
+router.register('flights', views.FlightViewSet)
+router.register('passengers', views.PassengerViewSet)
+router.register('reservations', views.ReservationViewSet)
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(router.urls))
+    path('flightServices/', include(router.urls)),
+    path('flightSrvices/findFlights/', views.find_flights)
 ]
