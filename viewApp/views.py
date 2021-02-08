@@ -17,7 +17,7 @@ from rest_framework import viewsets
 
 
 class StudentPagination(PageNumberPagination):
-    page_size = 6
+    page_size = 1
 
 
 class StudentViewSet(viewsets.ModelViewSet):
@@ -27,7 +27,8 @@ class StudentViewSet(viewsets.ModelViewSet):
     # pagination_class = PageNumberPagination
     # If we want to use a different number of pages at the class level, the new
     # class Student pagination is needed
-    pagination_class = LimitOffsetPagination
+    pagination_class = StudentPagination
+    #pagination_class = LimitOffsetPagination
 
 
 # As an alternative for only READ purposes:
