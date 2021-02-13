@@ -12,7 +12,7 @@ class Passenger(models.Model):
 
 
 class Flight(models.Model):
-    flightNumber = models.IntegerField
+    flightNumber = models.CharField(max_length=10, blank=True)
     operatingAirline = models.CharField(max_length=10)
     departureCity = models.CharField(max_length=10)
     arrivalCity = models.CharField(max_length=10)
@@ -23,3 +23,4 @@ class Flight(models.Model):
 class Reservation(models.Model):
     flight = models.ForeignKey(Flight, on_delete=models.CASCADE)
     passenger = models.OneToOneField(Passenger, on_delete=models.CASCADE)
+
