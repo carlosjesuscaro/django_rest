@@ -21,17 +21,15 @@ def find_flights(request):
 def save_reservation(request):
     flight = Flight.objects.get(id=request.data['flightId'])
     passenger = Passenger()
-    passenger.id = Passenger.objects.get(id=request.data['passengerId'])
     passenger.firstName = request.data['firstName']
     passenger.lastName = request.data['lastName']
     passenger.email = request.data['email']
-    passenger.passport = request.data['passport']
     passenger.phone = request.data['phone']
     passenger.save()
 
     reservation = Reservation()
     reservation.flight = flight
-    reservation.password = passenger
+    reservation.passenger = passenger
 
     reservation.save()
     return Response(status.HTTP_201_CREATED)
