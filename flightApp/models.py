@@ -6,8 +6,8 @@ from django.db import models
 class Passenger(models.Model):
     firstName = models.CharField(max_length=10)
     lastName = models.CharField(max_length=10)
-    email = models.CharField(max_length=40)
-    phone = models.CharField(max_length=10)
+    email = models.CharField(max_length=40, blank=True)
+    phone = models.CharField(max_length=10, blank=True)
     passport = models.IntegerField
 
 
