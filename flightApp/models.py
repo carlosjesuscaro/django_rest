@@ -12,7 +12,7 @@ class Passenger(models.Model):
 
 
 class Flight(models.Model):
-    flightNumber = models.CharField(max_length=10, blank=True)
+    flightNumber = models.CharField(max_length=10)
     operatingAirline = models.CharField(max_length=10)
     departureCity = models.CharField(max_length=10)
     arrivalCity = models.CharField(max_length=10)
